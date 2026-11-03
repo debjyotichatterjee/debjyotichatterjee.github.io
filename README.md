@@ -11,6 +11,7 @@ The current version is based on Debjyoti Chatterjee's 2026 résumé and includes
 - doctoral research in grid-forming inverter control and stability
 - experience at Tesla, National Laboratory of the Rockies, and Hitachi Energy
 - five research and hardware projects
+- a photo-led conference and presentation journal
 - seven selected IEEE publications
 - awards, fellowships, service, and leadership
 - LinkedIn, email, and a downloadable résumé

@@ -455,6 +455,132 @@ button:focus-visible {
 
 .experience li { grid-template-columns: 6.5rem 1fr; }
 
+.conferences {
+  padding-top: clamp(7rem, 13vw, 13rem);
+  padding-bottom: clamp(7rem, 13vw, 13rem);
+  border-top: 1px solid var(--line);
+}
+
+.conference-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(4rem, 8vw, 8rem) clamp(1.5rem, 4vw, 4rem);
+}
+
+.conference-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.conference-card--wide {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(300px, 0.75fr);
+  gap: clamp(2rem, 6vw, 6rem);
+  align-items: center;
+}
+
+.conference-card--reverse {
+  grid-template-columns: minmax(300px, 0.75fr) minmax(0, 1.25fr);
+}
+
+.conference-card--reverse .conference-card__image { order: 2; }
+
+.conference-card__image {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  background: #d7d3c8;
+}
+
+.conference-card--wide .conference-card__image { aspect-ratio: 16 / 10; }
+
+.conference-card__image::after {
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(255,255,255,0.28);
+  content: "";
+  pointer-events: none;
+}
+
+.conference-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.88) contrast(1.04);
+  transition: filter 350ms ease, transform 600ms cubic-bezier(.2,.7,.2,1);
+}
+
+.conference-card__image:hover img {
+  filter: saturate(1.05) contrast(1.02);
+  transform: scale(1.025);
+}
+
+.conference-card__image > span {
+  position: absolute;
+  right: 0.85rem;
+  bottom: 0.85rem;
+  padding: 0.55rem 0.7rem;
+  color: var(--ink);
+  background: var(--acid);
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.conference-card__body { padding-top: 1.5rem; }
+.conference-card--wide .conference-card__body { padding-top: 0; }
+
+.conference-card__kicker {
+  margin: 0 0 1rem;
+  color: var(--blue);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.conference-card h3 {
+  margin: 0;
+  font-family: var(--display);
+  font-size: clamp(2rem, 3.6vw, 4rem);
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  line-height: 0.98;
+  text-transform: uppercase;
+}
+
+.conference-card:not(.conference-card--wide) h3 {
+  font-size: clamp(1.8rem, 2.8vw, 3.1rem);
+}
+
+.conference-card__body > p:not(.conference-card__kicker) {
+  max-width: 640px;
+  margin: 1.3rem 0 0;
+  color: var(--muted);
+}
+
+.conference-card__link {
+  display: inline-block;
+  margin-top: 1.8rem;
+  padding-bottom: 0.18rem;
+  border-bottom: 1px solid currentColor;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.conference-card__link span {
+  display: inline-block;
+  transition: transform 180ms ease;
+}
+
+.conference-card__link:hover span { transform: translate(4px, -4px); }
+
 .achievements {
   width: 100%;
   max-width: none;
@@ -589,6 +715,10 @@ button:focus-visible {
   .experience,
   .publications,
   .honors { grid-template-columns: 1fr; }
+  .conference-card--wide,
+  .conference-card--reverse { grid-template-columns: 1fr; }
+  .conference-card--reverse .conference-card__image { order: 0; }
+  .conference-card--wide .conference-card__body { padding-top: 1.5rem; }
   .about__grid { grid-template-columns: 1fr; }
   .about__statement { padding-left: 0; }
   .capabilities { max-width: 640px; }
@@ -609,6 +739,9 @@ button:focus-visible {
   .project__body { min-height: 420px; }
   .achievement { grid-template-columns: 70px 1fr; }
   .achievement__index { display: none; }
+  .conference-grid { grid-template-columns: 1fr; }
+  .conference-card--wide { grid-column: auto; }
+  .conference-card--wide .conference-card__image { aspect-ratio: 4 / 3; }
   .publications li { grid-template-columns: 1fr; gap: 0.45rem; }
   .honors ul { grid-template-columns: 1fr; }
   .honors li,
