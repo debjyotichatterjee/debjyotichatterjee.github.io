@@ -1,6 +1,8 @@
-# Personal portfolio
+# Debjyoti Chatterjee — Portfolio
 
-A fast, responsive personal portfolio built with plain HTML, CSS, and JavaScript and prepared for GitHub Pages.
+A fast, responsive portfolio for Debjyoti Chatterjee, a power systems and control researcher working on grid-forming inverters, energy storage, and converter-dominated grids.
+
+**Live site:** [debjyotichatterjee.github.io](https://debjyotichatterjee.github.io/)
 
 ## Content
 
@@ -13,17 +15,10 @@ The current version is based on Debjyoti Chatterjee's 2026 résumé and includes
 - awards, fellowships, service, and leadership
 - LinkedIn, email, and a downloadable résumé
 
-The GitHub profile and custom domain can be added after the account and domain are confirmed.
+## Technology
 
-## Preview locally
+The site uses plain HTML, CSS, and JavaScript and is hosted with GitHub Pages. There are no packages, databases, or build tools to maintain.
+
+## Editing locally
 
 Open `index.html` directly in a browser. No installation or build step is required.
-
-## Publish with GitHub Pages
-
-1. Create a GitHub repository and put these files at its root.
-2. Push the repository's `main` branch.
-3. In **Settings → Pages**, set the source to **GitHub Actions**.
-4. The included workflow publishes the website automatically after every push.
-
-For a custom domain, add the domain in **Settings → Pages** after the first successful deployment. GitHub will create or instruct you to create the required DNS records.
