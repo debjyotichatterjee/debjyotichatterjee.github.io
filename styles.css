@@ -1125,6 +1125,10 @@ button:focus-visible {
   min-height: 0;
   background: var(--white);
 }
+.leadership-card--openminds {
+  grid-template-columns: 1fr;
+  min-height: 0;
+}
 .leadership-card--texe {
   grid-template-columns: 1fr;
   min-height: 0;
@@ -1201,68 +1205,69 @@ button:focus-visible {
 
 .leadership-card__links a:hover span { transform: translate(4px, -4px); }
 
-.leadership-card__visual--openminds {
+.leadership-card__openminds-photo {
   position: relative;
-  display: grid;
   min-width: 0;
-  min-height: 590px;
-  place-items: center;
   overflow: hidden;
-  color: var(--white);
-  background: var(--ink);
+  background: #c9c8bf;
 }
 
-.leadership-card__visual--openminds::before {
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(135deg, transparent 0 48%, rgba(216,255,62,0.12) 48% 49%, transparent 49% 100%),
-    radial-gradient(circle at 50% 48%, rgba(36,84,255,0.4), transparent 42%);
-  content: "";
-}
-
-.leadership-card__code {
-  position: absolute;
-  top: 1.5rem;
-  left: 1.5rem;
-  color: var(--acid);
-  font-family: var(--display);
-  font-size: clamp(4.8rem, 9vw, 9rem);
-  font-weight: 850;
-  letter-spacing: -0.075em;
-  line-height: 0.8;
-}
-
-.leadership-card__portrait {
+.leadership-card__openminds-photo figure {
   position: relative;
-  z-index: 1;
-  width: min(62%, 300px);
+  aspect-ratio: 3 / 2;
   margin: 0;
   overflow: hidden;
-  aspect-ratio: 1;
-  border: 0.75rem solid var(--paper);
-  border-radius: 50%;
-  box-shadow: 0 0 0 1px rgba(255,255,255,0.24);
 }
 
-.leadership-card__portrait img {
+.leadership-card__openminds-photo figure::after {
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(255,255,255,0.3);
+  content: "";
+  pointer-events: none;
+}
+
+.leadership-card__openminds-photo img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: 50% 50%;
+  filter: saturate(0.96) contrast(1.02);
+  transition: filter 350ms ease, transform 600ms cubic-bezier(.2,.7,.2,1);
 }
 
-.leadership-card__visual--openminds > p {
+.leadership-card__openminds-photo:hover img {
+  filter: saturate(1.04) contrast(1.02);
+  transform: scale(1.012);
+}
+
+.leadership-card__openminds-photo figcaption {
   position: absolute;
-  right: 1.5rem;
-  bottom: 1.5rem;
-  z-index: 1;
-  margin: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  padding: 4.5rem 1.1rem 1rem;
+  color: var(--white);
+  background: linear-gradient(180deg, transparent, rgba(0,0,0,0.74));
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.leadership-card__openminds-photo > span {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 2;
   padding: 0.6rem 0.75rem;
   color: var(--ink);
   background: var(--acid);
-  font-size: 0.66rem;
+  font-size: 0.64rem;
   font-weight: 800;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
@@ -1510,7 +1515,6 @@ button:focus-visible {
   .conference-card--wide .conference-card__body { padding-top: 1.5rem; }
   .leadership-card,
   .leadership-card--texe { grid-template-columns: 1fr; }
-  .leadership-card__visual--openminds,
   .leadership-card__gallery { min-height: 520px; }
   .leadership-card__gallery--texe { min-height: 720px; }
   .leadership-card--texe .leadership-card__body { order: 2; }
@@ -1560,8 +1564,9 @@ button:focus-visible {
   .leadership-card__body { padding: 2rem 1.25rem 2.4rem; }
   .leadership-card h3 { font-size: clamp(2.35rem, 12.5vw, 4.2rem); }
   .leadership-card__meta { align-items: flex-start; }
-  .leadership-card__visual--openminds { min-height: 460px; }
-  .leadership-card__portrait { width: min(64%, 270px); border-width: 0.55rem; }
+  .leadership-card__openminds-photo figure { aspect-ratio: 3 / 2; }
+  .leadership-card__openminds-photo figcaption { padding: 3.5rem 0.85rem 0.75rem; font-size: 0.6rem; }
+  .leadership-card__openminds-photo > span { top: 0.75rem; right: 0.75rem; font-size: 0.56rem; }
   .leadership-card__gallery { grid-template-columns: 1fr; gap: 0; min-height: 0; }
   .leadership-card__gallery figure:first-child { aspect-ratio: 4 / 3; }
   .leadership-card__gallery figure:nth-child(2) { aspect-ratio: 4 / 5; }
