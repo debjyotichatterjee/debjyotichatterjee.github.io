@@ -1121,7 +1121,10 @@ button:focus-visible {
 }
 
 .leadership-card--lec { background: var(--white); }
-.leadership-card--texe { grid-template-columns: minmax(0, 1.02fr) minmax(360px, 0.98fr); }
+.leadership-card--texe {
+  grid-template-columns: 1fr;
+  min-height: 0;
+}
 
 .leadership-card__body {
   display: flex;
@@ -1285,6 +1288,24 @@ button:focus-visible {
   pointer-events: none;
 }
 
+.leadership-card__gallery figcaption {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  margin: 0;
+  padding: 2.4rem 1rem 0.9rem;
+  color: var(--white);
+  background: linear-gradient(180deg, transparent, rgba(6, 6, 7, 0.88));
+  font-size: clamp(0.58rem, 0.72vw, 0.7rem);
+  font-weight: 750;
+  letter-spacing: 0.045em;
+  line-height: 1.4;
+  text-wrap: balance;
+  text-transform: uppercase;
+}
+
 .leadership-card__gallery img {
   width: 100%;
   height: 100%;
@@ -1295,8 +1316,16 @@ button:focus-visible {
 
 .leadership-card--lec .leadership-card__gallery figure:first-child img { object-position: 48% 50%; }
 .leadership-card--lec .leadership-card__gallery figure:nth-child(2) img { object-position: 58% 50%; }
-.leadership-card__gallery--texe figure:first-child img { object-position: 52% 50%; }
-.leadership-card__gallery--texe figure:nth-child(2) img { object-position: 50% 50%; }
+.leadership-card__gallery--texe {
+  grid-template-columns: minmax(320px, 0.95fr) minmax(420px, 1.05fr);
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  min-height: 720px;
+}
+
+.leadership-card__gallery--texe .leadership-card__gallery-feature { grid-row: 1 / 3; }
+.leadership-card__gallery--texe figure:first-child img { object-position: 50% 46%; }
+.leadership-card__gallery--texe figure:nth-child(2) img { object-position: 54% 50%; }
+.leadership-card__gallery--texe figure:nth-child(3) img { object-position: 50% 50%; }
 
 .leadership-card__gallery:hover img {
   filter: saturate(1.04) contrast(1.02);
@@ -1474,6 +1503,7 @@ button:focus-visible {
   .leadership-card--texe { grid-template-columns: 1fr; }
   .leadership-card__visual--openminds,
   .leadership-card__gallery { min-height: 520px; }
+  .leadership-card__gallery--texe { min-height: 720px; }
   .leadership-card--texe .leadership-card__body { order: 2; }
   .about__grid { grid-template-columns: 1fr; }
   .about__statement { padding-left: 0; }
@@ -1526,6 +1556,11 @@ button:focus-visible {
   .leadership-card__gallery { grid-template-columns: 1fr; gap: 0; min-height: 0; }
   .leadership-card__gallery figure:first-child { aspect-ratio: 4 / 3; }
   .leadership-card__gallery figure:nth-child(2) { aspect-ratio: 4 / 5; }
+  .leadership-card__gallery--texe { grid-template-columns: 1fr; grid-template-rows: none; min-height: 0; }
+  .leadership-card__gallery--texe .leadership-card__gallery-feature { grid-row: auto; aspect-ratio: 4 / 5; }
+  .leadership-card__gallery--texe figure:nth-child(2),
+  .leadership-card__gallery--texe figure:nth-child(3) { aspect-ratio: 16 / 10; }
+  .leadership-card__gallery figcaption { padding: 3.1rem 0.85rem 0.75rem; font-size: 0.6rem; }
   .publications li { grid-template-columns: 1fr; gap: 0.45rem; }
   .honors ul { grid-template-columns: 1fr; }
   .honors li,
