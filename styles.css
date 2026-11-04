@@ -1546,7 +1546,7 @@ button:focus-visible {
   .signal-card__visual { min-height: 270px; }
   .section-heading { grid-template-columns: 1fr; margin-bottom: 3.5rem; }
   .section-heading h2 { font-size: clamp(2.9rem, 15vw, 5.2rem); }
-  .news-feature__story h3 { font-size: clamp(3.2rem, 17vw, 5.6rem); }
+  .news-feature__story h3 { font-size: clamp(3.2rem, 16vw, 5.6rem); }
   .news-gallery { grid-template-columns: 1fr; grid-template-rows: none; min-height: 0; }
   .news-gallery__item--portrait { grid-row: auto; aspect-ratio: 4 / 5; }
   .news-gallery__item--roadmap,
