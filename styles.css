@@ -208,10 +208,19 @@ button:focus-visible {
 
 .hero__lede strong { color: var(--ink); font-weight: 600; }
 
+.hero__lede p { margin: 0; }
+
+.hero__lede p + p { margin-top: 1.15em; }
+
+.hero__lede em {
+  color: var(--blue);
+  font-weight: 500;
+}
+
 .hero__lede a {
   color: var(--ink);
   font-weight: 600;
-  text-decoration-color: var(--accent);
+  text-decoration-color: var(--acid);
   text-decoration-thickness: 0.12em;
   text-underline-offset: 0.16em;
 }
