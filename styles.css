@@ -940,6 +940,61 @@ button:focus-visible {
 
 .conference-card--reverse .conference-card__image { order: 2; }
 
+.conference-card__gallery {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.75fr);
+  gap: 0.65rem;
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+  background: #d7d3c8;
+}
+
+.conference-card__gallery figure {
+  position: relative;
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+.conference-card__gallery figure::after {
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(255,255,255,0.28);
+  content: "";
+  pointer-events: none;
+}
+
+.conference-card__gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.88) contrast(1.04);
+  transition: filter 350ms ease, transform 600ms cubic-bezier(.2,.7,.2,1);
+}
+
+.conference-card__gallery figure:first-child img { object-position: 50% 52%; }
+.conference-card__gallery figure:nth-child(2) img { object-position: 56% 50%; }
+
+.conference-card__gallery:hover img {
+  filter: saturate(1.05) contrast(1.02);
+  transform: scale(1.018);
+}
+
+.conference-card__gallery > span {
+  position: absolute;
+  right: 0.85rem;
+  bottom: 0.85rem;
+  z-index: 1;
+  padding: 0.55rem 0.7rem;
+  color: var(--ink);
+  background: var(--acid);
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 .conference-card__image {
   position: relative;
   display: block;
@@ -1014,6 +1069,14 @@ button:focus-visible {
   max-width: 640px;
   margin: 1.3rem 0 0;
   color: var(--muted);
+}
+
+.conference-card__body .conference-card__credit {
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--line);
+  font-family: var(--serif);
+  font-size: 0.92rem;
+  font-style: italic;
 }
 
 .conference-card__link {
@@ -1226,6 +1289,9 @@ button:focus-visible {
   .conference-grid { grid-template-columns: 1fr; }
   .conference-card--wide { grid-column: auto; }
   .conference-card--wide .conference-card__image { aspect-ratio: 4 / 3; }
+  .conference-card__gallery { grid-template-columns: 1fr; aspect-ratio: auto; }
+  .conference-card__gallery figure:first-child { aspect-ratio: 4 / 3; }
+  .conference-card__gallery figure:nth-child(2) { aspect-ratio: 4 / 5; }
   .publications li { grid-template-columns: 1fr; gap: 0.45rem; }
   .honors ul { grid-template-columns: 1fr; }
   .honors li,
