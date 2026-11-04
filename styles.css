@@ -1091,6 +1091,16 @@ button:focus-visible {
 
 .conference-card__link:hover span { transform: translate(4px, -4px); }
 
+.conference-card__links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.9rem 1.4rem;
+  margin-top: 1.8rem;
+}
+
+.conference-card__links .conference-card__link { margin-top: 0; }
+
 .leadership {
   padding-top: clamp(7rem, 13vw, 13rem);
   padding-bottom: clamp(7rem, 13vw, 13rem);
