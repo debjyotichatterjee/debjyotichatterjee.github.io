@@ -1489,6 +1489,13 @@ button:focus-visible {
   .site-nav { display: none; }
 }
 
+@media (min-width: 941px) and (max-width: 1240px) {
+  .news-feature__story h3 {
+    font-size: clamp(3.05rem, 5vw, 4.4rem);
+    letter-spacing: -0.055em;
+  }
+}
+
 @media (max-width: 940px) {
   .hero { grid-template-columns: 1fr; min-height: auto; }
   .hero__aside { display: grid; grid-template-columns: minmax(260px, 0.8fr) 1fr; gap: 1.5rem; padding-top: 0; }
