@@ -13,7 +13,7 @@ The current version is based on Debjyoti Chatterjee's 2026 résumé and includes
 - five research and hardware projects
 - a photo-led news and milestone journal
 - a photo-led conference and presentation journal
-- seven selected IEEE publications
+- selected IEEE publications with publisher, PDF, and Google Scholar links
 - awards, fellowships, service, and leadership
 - LinkedIn, email, and a downloadable résumé
 
