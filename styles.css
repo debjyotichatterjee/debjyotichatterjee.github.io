@@ -1190,7 +1190,67 @@ button:focus-visible {
   color: var(--muted);
 }
 
-.experience li { grid-template-columns: 6.5rem 1fr; }
+.experience li {
+  grid-template-columns: 6.5rem minmax(145px, 0.48fr) minmax(260px, 1fr);
+  gap: clamp(1rem, 2vw, 1.75rem);
+  align-items: start;
+}
+
+.experience__image {
+  position: relative;
+  overflow: hidden;
+  min-height: 148px;
+  margin: 0;
+  background: var(--ink);
+}
+
+.experience__image::after {
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(21, 21, 21, 0.12);
+  content: "";
+  pointer-events: none;
+}
+
+.experience__image img {
+  width: 100%;
+  height: 100%;
+  min-height: 148px;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 320ms ease;
+}
+
+.experience__image--tesla img { object-position: center 36%; }
+
+.experience li:hover .experience__image img { transform: scale(1.025); }
+
+.experience__copy strong small {
+  display: inline-block;
+  margin-left: 0.35rem;
+  color: var(--blue);
+  font-family: var(--body);
+  font-size: 0.58rem;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+  vertical-align: 0.28em;
+}
+
+.experience li .experience__role {
+  margin-top: 0.45rem;
+  color: var(--ink);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.065em;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
+.experience__copy p:last-child {
+  max-width: 620px;
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
 
 .conferences {
   padding-top: clamp(7rem, 13vw, 13rem);
@@ -1934,6 +1994,7 @@ button:focus-visible {
   .research-index,
   .experience,
   .publications { grid-template-columns: 1fr; }
+  .experience li { grid-template-columns: 6.5rem minmax(170px, 0.42fr) minmax(280px, 1fr); }
   .honors__heading { grid-template-columns: 1fr; }
   .honors__heading > p:last-child { max-width: 620px; }
   .honors ul { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -2003,6 +2064,18 @@ button:focus-visible {
   .news-pesgm__photo { aspect-ratio: 4 / 3; }
   .project__visual { min-height: 350px; }
   .project__body { min-height: 420px; }
+  .experience li {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+    padding: 1.35rem 0 1.75rem;
+  }
+  .experience li > span { order: 1; }
+  .experience__image { order: 2; min-height: 0; aspect-ratio: 16 / 9; }
+  .experience__image img { min-height: 0; }
+  .experience__image--tesla { aspect-ratio: 4 / 3; }
+  .experience__copy { order: 3; }
+  .experience__copy strong { font-size: 1.5rem; }
+  .experience__copy p:last-child { font-size: 0.88rem; }
   .achievement-list { grid-template-columns: 1fr; }
   .achievement { min-height: 0; }
   .achievement__index { display: none; }
