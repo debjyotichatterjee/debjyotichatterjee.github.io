@@ -360,88 +360,95 @@
           <p class="section-number">02 / Selected work</p>
           <div>
             <h2 id="work-title">From models to megawatts.</h2>
-            <p>Research and engineering work spanning analytical theory, EMT simulation, and controller hardware validation.</p>
+            <p>Research and engineering work spanning system planning, analytical theory, EMT simulation, and control-hardware validation.</p>
           </div>
         </div>
 
-        <div class="project-list">
-          <article class="project project--ink reveal">
-            <div class="project__visual project__visual--grid" aria-hidden="true">
-              <span class="visual-index">01</span>
-              <div class="grid-window">
-                <span></span><span></span><span></span><span></span>
-              </div>
-            </div>
-            <div class="project__body">
-              <p class="project__meta"><span>Tesla Energy</span><span>2025–2026</span></p>
-              <h3>Utility-scale BESS modeling &amp; controls</h3>
-              <p>
-                Delivered grid-code and interconnection studies for two 300–500 MW
-                battery projects, tuned PSCAD EMT models against controller
-                hardware-in-the-loop results, and developed load-smoothing control
-                that reduced grid-seen variability by up to 95%.
-              </p>
-              <ul class="tag-list" aria-label="Project topics">
-                <li>PSCAD</li><li>GFM BESS</li><li>CHIL</li>
-              </ul>
-              <a class="project__link" href="#experience">View experience <span aria-hidden="true">↓</span></a>
-            </div>
-          </article>
 
-          <article class="project project--blue reveal">
-            <div class="project__visual project__visual--rings" aria-hidden="true">
-              <span class="visual-index">02</span>
-              <span class="ring ring--a"></span>
-              <span class="ring ring--b"></span>
-              <span class="ring ring--c"></span>
-            </div>
-            <div class="project__body">
-              <p class="project__meta"><span>Hardware research</span><span>2024</span></p>
-              <h3>Fault ride-through for series GFM inverters</h3>
-              <p>
-                Developed homogeneous and mixed GFM–GFL fault ride-through
-                strategies, then validated them on three series-connected
-                converters. The proposed controllers cut resynchronization time
-                by more than 25% against baseline methods.
-              </p>
-              <ul class="tag-list" aria-label="Project topics">
-                <li>FRT</li><li>Hardware</li><li>Control design</li>
-              </ul>
-              <a class="project__link" href="#publications">Related publication <span aria-hidden="true">↓</span></a>
-            </div>
-          </article>
-
-          <article class="project project--acid reveal">
-            <div class="project__visual project__visual--type" aria-hidden="true">
-              <span class="visual-index">03</span>
-              <span class="giant-type">A→B</span>
-            </div>
-            <div class="project__body">
-              <p class="project__meta"><span>Stability research</span><span>2025</span></p>
-              <h3>Interaction-energy stability analysis</h3>
-              <p>
-                Built an analytical transient-stability framework for multi-GFM
-                inverter systems under current limiting. A new inverter-to-inverter
-                interaction-energy metric exposes how asymmetric tuning changes
-                fault-induced angle stability margins.
-              </p>
-              <ul class="tag-list" aria-label="Project topics">
-                <li>Nonlinear systems</li><li>MATLAB</li><li>Stability</li>
-              </ul>
-              <a class="project__link" href="#publications">Related publications <span aria-hidden="true">↓</span></a>
-            </div>
-          </article>
-        </div>
-
-        <div class="research-index reveal" aria-labelledby="research-index-title">
-          <div class="research-index__intro">
-            <p class="label">Research index</p>
-            <h3 id="research-index-title">More systems explored in depth.</h3>
+        <div class="publications reveal" id="publications">
+          <div class="publications__heading">
+            <p class="label">Selected publications</p>
+            <p>Contributions across IEEE journals and conferences.</p>
+            <a
+              class="publications__scholar"
+              href="https://scholar.google.co.in/citations?user=AfHyV8oAAAAJ&amp;hl=en"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Detailed paper list on Google Scholar <span aria-hidden="true">↗</span>
+            </a>
           </div>
           <ol>
-            <li><span>01</span><div><strong>Interoperability and current limiting</strong><p>Tested droop, VSM, and dVOC interoperability—and overcurrent-limiting behavior—across three parallel 5 kW GFM inverters.</p></div></li>
-            <li><span>02</span><div><strong>Voltage balancing in unbalanced microgrids</strong><p>Designed sequence-control methods that held load-voltage imbalance below 1% across distributed-generation cases.</p></div></li>
-            <li><span>03</span><div><strong>Hybrid AC–DC microgrid control</strong><p>Developed synchro-converter control for bidirectional power sharing between AC and DC subgrids in MATLAB/Simulink.</p></div></li>
+            <li>
+              <span>2025 · IEEE ECCE</span>
+              <div class="publication__content">
+                <strong>Interaction Energy-Based Transient Stability Framework for Multi-Grid-Forming Inverter Systems</strong>
+                <div class="publication__links">
+                  <a href="https://ieeexplore.ieee.org/abstract/document/11260189/" target="_blank" rel="noreferrer">IEEE <span aria-hidden="true">↗</span></a>
+                  <a href="https://ieeexplore.ieee.org/iel8/11259441/11259442/11260189.pdf" target="_blank" rel="noreferrer">PDF <span aria-hidden="true">↗</span></a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <span>2025 · IEEE COMPEL</span>
+              <div class="publication__content">
+                <strong>Demystifying Grid-Forming Inverter Large-Signal Stability Assessment with Equivalent-Circuit Models</strong>
+                <div class="publication__links">
+                  <a href="https://ieeexplore.ieee.org/abstract/document/11121209/" target="_blank" rel="noreferrer">IEEE <span aria-hidden="true">↗</span></a>
+                  <a href="https://ieeexplore.ieee.org/iel8/11121181/11121149/11121209.pdf" target="_blank" rel="noreferrer">PDF <span aria-hidden="true">↗</span></a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <span>2025 · IEEE PESGM</span>
+              <div class="publication__content">
+                <strong>Is Equal Area Criterion Applicable for Transient Stability Assessment of Grid-Forming Inverters?</strong>
+                <div class="publication__links">
+                  <a href="https://ieeexplore.ieee.org/abstract/document/11225302/" target="_blank" rel="noreferrer">IEEE <span aria-hidden="true">↗</span></a>
+                  <a href="https://ieeexplore.ieee.org/iel8/11224957/11224958/11225302.pdf" target="_blank" rel="noreferrer">PDF <span aria-hidden="true">↗</span></a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <span>2025 · IEEE PESGM</span>
+              <div class="publication__content">
+                <strong>Stability Analysis of Multi-Inverter Systems with Heterogeneous Grid-Forming Dynamics</strong>
+                <div class="publication__links">
+                  <a href="https://ieeexplore.ieee.org/abstract/document/11225105/" target="_blank" rel="noreferrer">IEEE <span aria-hidden="true">↗</span></a>
+                  <a href="https://ieeexplore.ieee.org/iel8/11224957/11224958/11225105.pdf" target="_blank" rel="noreferrer">PDF <span aria-hidden="true">↗</span></a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <span>2024 · IEEE TPEL</span>
+              <div class="publication__content">
+                <strong>Overcurrent Limiting in Grid-Forming Inverters: A Comprehensive Review and Discussion</strong>
+                <div class="publication__links">
+                  <a href="https://ieeexplore.ieee.org/abstract/document/10603443/" target="_blank" rel="noreferrer">IEEE <span aria-hidden="true">↗</span></a>
+                  <a href="https://ieeexplore.ieee.org/iel8/63/4359240/10603443.pdf" target="_blank" rel="noreferrer">PDF <span aria-hidden="true">↗</span></a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <span>2024 · IEEE ECCE</span>
+              <div class="publication__content">
+                <strong>Fault Ride-Through for Cascaded Inverters Using Mixed Grid-Forming and Grid-Following Control</strong>
+                <div class="publication__links">
+                  <a href="https://ieeexplore.ieee.org/abstract/document/10860876/" target="_blank" rel="noreferrer">IEEE <span aria-hidden="true">↗</span></a>
+                  <a href="https://ieeexplore.ieee.org/iel8/10860271/10860272/10860876.pdf" target="_blank" rel="noreferrer">PDF <span aria-hidden="true">↗</span></a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <span>2023 · IEEE PESGM</span>
+              <div class="publication__content">
+                <strong>Voltage Balancing of Grid-Forming Inverters in Unbalanced, Islanded Microgrids</strong>
+                <div class="publication__links">
+                  <a href="https://ieeexplore.ieee.org/abstract/document/10253222/" target="_blank" rel="noreferrer">IEEE <span aria-hidden="true">↗</span></a>
+                  <a href="https://ieeexplore.ieee.org/iel7/10252165/10252088/10253222.pdf" target="_blank" rel="noreferrer">PDF <span aria-hidden="true">↗</span></a>
+                </div>
+              </div>
+            </li>
           </ol>
         </div>
 
@@ -743,92 +750,6 @@
           </ul>
         </div>
 
-        <div class="publications reveal" id="publications">
-          <div class="publications__heading">
-            <p class="label">Selected publications</p>
-            <p>Contributions across IEEE journals and conferences.</p>
-            <a
-              class="publications__scholar"
-              href="https://scholar.google.co.in/citations?user=AfHyV8oAAAAJ&amp;hl=en"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Detailed paper list on Google Scholar <span aria-hidden="true">↗</span>
-            </a>
-          </div>
-          <ol>
-            <li>
-              <span>2025 · IEEE ECCE</span>
-              <div class="publication__content">
-                <strong>Interaction Energy-Based Transient Stability Framework for Multi-Grid-Forming Inverter Systems</strong>
-                <div class="publication__links">
-                  <a href="https://ieeexplore.ieee.org/abstract/document/11260189/" target="_blank" rel="noreferrer">IEEE <span aria-hidden="true">↗</span></a>
-                  <a href="https://ieeexplore.ieee.org/iel8/11259441/11259442/11260189.pdf" target="_blank" rel="noreferrer">PDF <span aria-hidden="true">↗</span></a>
-                </div>
-              </div>
-            </li>
-            <li>
-              <span>2025 · IEEE COMPEL</span>
-              <div class="publication__content">
-                <strong>Demystifying Grid-Forming Inverter Large-Signal Stability Assessment with Equivalent-Circuit Models</strong>
-                <div class="publication__links">
-                  <a href="https://ieeexplore.ieee.org/abstract/document/11121209/" target="_blank" rel="noreferrer">IEEE <span aria-hidden="true">↗</span></a>
-                  <a href="https://ieeexplore.ieee.org/iel8/11121181/11121149/11121209.pdf" target="_blank" rel="noreferrer">PDF <span aria-hidden="true">↗</span></a>
-                </div>
-              </div>
-            </li>
-            <li>
-              <span>2025 · IEEE PESGM</span>
-              <div class="publication__content">
-                <strong>Is Equal Area Criterion Applicable for Transient Stability Assessment of Grid-Forming Inverters?</strong>
-                <div class="publication__links">
-                  <a href="https://ieeexplore.ieee.org/abstract/document/11225302/" target="_blank" rel="noreferrer">IEEE <span aria-hidden="true">↗</span></a>
-                  <a href="https://ieeexplore.ieee.org/iel8/11224957/11224958/11225302.pdf" target="_blank" rel="noreferrer">PDF <span aria-hidden="true">↗</span></a>
-                </div>
-              </div>
-            </li>
-            <li>
-              <span>2025 · IEEE PESGM</span>
-              <div class="publication__content">
-                <strong>Stability Analysis of Multi-Inverter Systems with Heterogeneous Grid-Forming Dynamics</strong>
-                <div class="publication__links">
-                  <a href="https://ieeexplore.ieee.org/abstract/document/11225105/" target="_blank" rel="noreferrer">IEEE <span aria-hidden="true">↗</span></a>
-                  <a href="https://ieeexplore.ieee.org/iel8/11224957/11224958/11225105.pdf" target="_blank" rel="noreferrer">PDF <span aria-hidden="true">↗</span></a>
-                </div>
-              </div>
-            </li>
-            <li>
-              <span>2024 · IEEE TPEL</span>
-              <div class="publication__content">
-                <strong>Overcurrent Limiting in Grid-Forming Inverters: A Comprehensive Review and Discussion</strong>
-                <div class="publication__links">
-                  <a href="https://ieeexplore.ieee.org/abstract/document/10603443/" target="_blank" rel="noreferrer">IEEE <span aria-hidden="true">↗</span></a>
-                  <a href="https://ieeexplore.ieee.org/iel8/63/4359240/10603443.pdf" target="_blank" rel="noreferrer">PDF <span aria-hidden="true">↗</span></a>
-                </div>
-              </div>
-            </li>
-            <li>
-              <span>2024 · IEEE ECCE</span>
-              <div class="publication__content">
-                <strong>Fault Ride-Through for Cascaded Inverters Using Mixed Grid-Forming and Grid-Following Control</strong>
-                <div class="publication__links">
-                  <a href="https://ieeexplore.ieee.org/abstract/document/10860876/" target="_blank" rel="noreferrer">IEEE <span aria-hidden="true">↗</span></a>
-                  <a href="https://ieeexplore.ieee.org/iel8/10860271/10860272/10860876.pdf" target="_blank" rel="noreferrer">PDF <span aria-hidden="true">↗</span></a>
-                </div>
-              </div>
-            </li>
-            <li>
-              <span>2023 · IEEE PESGM</span>
-              <div class="publication__content">
-                <strong>Voltage Balancing of Grid-Forming Inverters in Unbalanced, Islanded Microgrids</strong>
-                <div class="publication__links">
-                  <a href="https://ieeexplore.ieee.org/abstract/document/10253222/" target="_blank" rel="noreferrer">IEEE <span aria-hidden="true">↗</span></a>
-                  <a href="https://ieeexplore.ieee.org/iel7/10252165/10252088/10253222.pdf" target="_blank" rel="noreferrer">PDF <span aria-hidden="true">↗</span></a>
-                </div>
-              </div>
-            </li>
-          </ol>
-        </div>
 
       </section>
 
